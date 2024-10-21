@@ -21,7 +21,6 @@ app.use(session({
 }));
 app.set('view engine', 'ejs');
 
-// Begin Snippet 2: PingOne Express Authorization Code Flow
 // Express endpoint to redirect to the login path for PingOne
 app.get('/login', async (req, res) => {
     // Generate a unique code_verifier for this session
@@ -41,9 +40,7 @@ app.get('/login', async (req, res) => {
     // Redirect to the PingOne authorization url for your environment to begin the authentication process
     res.redirect(authorizationRequest.toString());
 });
-// End Snippet 2
 
-// Begin Snippet 3: PingOne Express Authorization Code Flow
 // Extract the callback path if the redirect uri is present, otherwise use /callback
 const redirectUri = process.env.REDIRECT_URI;
 const match = redirectUri.match(/:\d+(\/.*)/);
@@ -112,7 +109,6 @@ app.get(callbackPath, async (req, res) => {
         res.status(500).send(error);
     }
 });
-// End Snippet 3
 
 // End the app session as well as the PingOne session
 app.get('/logout', async function(req, res){
