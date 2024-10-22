@@ -5,7 +5,7 @@ const path = require('path');
 const fetch = require('node-fetch');
 require('dotenv').config();
 
-const randomstring = require("randomstring");
+const randomString = require("randomstring");
 
 const { createHash } = require('crypto');
 
@@ -24,7 +24,7 @@ app.set('view engine', 'ejs');
 // Express endpoint to redirect to the login path for PingOne
 app.get('/login', async (req, res) => {
     // Generate a unique code_verifier for this session
-    const code_verifier = randomstring.generate(128);
+    const code_verifier = randomString.generate(128);
     req.session.code_verifier = code_verifier;
 
     // Create the authorization url expected by PingOne
