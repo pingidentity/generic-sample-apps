@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../public/css/styles.css">
+  <link rel="stylesheet" href="../public/css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    function copyToClipboard(elementId) {
+      const copyText = document.getElementById(elementId);
+
+      copyText.select();
+      navigator.clipboard.writeText(copyText.innerHTML);
+    }
+  </script>
+</head>
+
+<body class="page-body">
+  <div class="page-content">
+    <div class="header-container bg-white">
+      <div class="logo-button">
+        <a class="navbar-brand pt-0 ms-3 ms-lg-0" id="bxi-logo" href="/">
+          <img width="132" src="../public/assets/ping-logo-horizontal.svg" alt="Logo" />
+        </a>
+      </div>
+      <a href="logout">Sign Off</a>
+    </div>
+
+    <div class="body-container">
+      <div class="card">
+        <div>
+          <span>Access Token</span>
+          <div class="token-container d-flex">
+            <div style="overflow: auto;">
+              <span class="token" id="accessToken">
+                eyJraWQiOiJkNWJhOWQ2MC04MDBhLTExZWYtOTUxMS1iZGMzZDRiN2MxZGEiLCJhbGciOiJSUzI1NiJ9.eyJjbGllbnRfaWQiOiJlMGQwNzJhZC0zMjA3LTQyNzMtODczMC1lOTkzZjRlODY5MmMiLCJpc3MiOiJodHRwczovL2F1dGgudGVzdC1vbmUtcGluZ29uZS5jb20vOWI2NGNmZmYtYmFmNy00MTgyLTgzOGEtY2Q1ZWZmYzMxZTcwL2FzIiwianRpIjoiZjVkOWM2MTAtNWNmYi00MDZkLWIwZDMtNGMxZDcxNjZhNjM4IiwiaWF0IjoxNzI5ODM2NzA3LCJleHAiOjE3Mjk4NDAzMDcsImF1ZCI6WyJodHRwczovL2FwaS50ZXN0LW9uZS1waW5nb25lLmNvbSJdLCJzY29wZSI6Im9wZW5pZCIsInN1YiI6ImZhMWQ2Yzk4LTQ3OTYtNGExNC1hNjg0LWY0YjM0MWQ0YjA2ZSIsInNpZCI6IjRiZTczOTExLWNmNmQtNGFlNS1hZTg3LTNjZmUzNjZjNzVjMyIsImVudiI6IjliNjRjZmZmLWJhZjctNDE4Mi04MzhhLWNkNWVmZmMzMWU3MCIsIm9yZyI6IjEzNDhmNDRiLTIzZmYtNDhmZS04NTYzLThiMDYzZWMyYzg1MCJ9.lpHIR1OJDMewW1xaLH2wKTfrXqUGefV6YzlDYQYVqag3_Svm0OBiT6geOIF5Y1p0mMfx1hU2_veg3mUz8dCtfxcFkGK17Xo1WTbyh_52KFGfpmBNqAwei1IiIfHVswaqfBAnHQUp_y5wNV66GAsJ1hYvRFqWR3QCEUbHD9GnXwivspNijt14mxLPiPrZHj_B0XWzX3vpBQWRk-Ng8zDF71uGJrCNvxoaSwKnGtAtbmfjn4BMsubxjRgHtVu_rRdN8fNpYmqfKlJt0Mx-NxwJAUb19Mrm-zClpBpe7sQjUBWCFh5FmY8KFYWAIVxf_uYrJEVyPhIGVxAHIZeD1FICjQ
+              </span>
+            </div>
+            <button class="token-copy-button" onclick="copyToClipboard('accessToken')">
+              <img src="../public/assets/clipboard.svg" alt="Copy to Clipboard" />
+            </button>
+          </div>
+        </div>
+
+        <div style="padding-top:15px">
+          <span>Id Token</span>
+          <div class="token-container d-flex">
+            <div style="overflow: auto;">
+              <span class="token" id="idToken">
+                eyJraWQiOiJkNWJhOWQ2MC04MDBhLTExZWYtOTUxMS1iZGMzZDRiN2MxZGEiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGgudGVzdC1vbmUtcGluZ29uZS5jb20vOWI2NGNmZmYtYmFmNy00MTgyLTgzOGEtY2Q1ZWZmYzMxZTcwL2FzIiwic3ViIjoiZmExZDZjOTgtNDc5Ni00YTE0LWE2ODQtZjRiMzQxZDRiMDZlIiwiYXVkIjoiZTBkMDcyYWQtMzIwNy00MjczLTg3MzAtZTk5M2Y0ZTg2OTJjIiwiaWF0IjoxNzI5ODM2NzA3LCJleHAiOjE3Mjk4NDAzMDcsImFjciI6IlNpbmdsZV9GYWN0b3IiLCJhbXIiOlsicHdkIl0sImF1dGhfdGltZSI6MTcyOTgzNjQ5OCwiYXRfaGFzaCI6IldpVDcwSFJJY2NhYVpSblUtMUhQdHciLCJzaWQiOiI0YmU3MzkxMS1jZjZkLTRhZTUtYWU4Ny0zY2ZlMzY2Yzc1YzMiLCJlbnYiOiI5YjY0Y2ZmZi1iYWY3LTQxODItODM4YS1jZDVlZmZjMzFlNzAiLCJvcmciOiIxMzQ4ZjQ0Yi0yM2ZmLTQ4ZmUtODU2My04YjA2M2VjMmM4NTAiLCJwMS5yZWdpb24iOiJOQTEifQ.lb1r3RCHOeL_Ds8FdjwtgzHIxheF7XF6Y44m-OVTLhdPvgMOUkNl8HgfwDLsvjHaRm917njHVCDkGZfngnhGdTGgkdrsC4zDgcy782dNnatDqs0BNgW06eT7RXRyhy_0ws0yO25EuyZkhMNyTZGgw3bvKqv6eCp1WQM2jkwbRCYkqmZZ2XruE4aCBkWlJYNvRvUsozYkA5Ln1K3wua-js-e3vjLztyGkR9aeemQ-20YlvIrfiqQ73O1EBBBqprs61CVVoHs48v28RWu2BLDZXp50vXsVyB5KoXtmquFlLoy24wBc2ZgXJxBsmdvN0BL7WNwZyq5llWpE6AxQg7uLUw
+              </span>
+            </div>
+            <button class="token-copy-button" onclick="copyToClipboard('idToken')">
+              <img src="../public/assets/clipboard.svg" alt="Copy to Clipboard" />
+            </button>
+          </div>
+        </div>
+
+        <div style="padding-top:22px">
+          <a class="link" href="https://developer.pingidentity.com/en/tools/jwt-decoder.html" target="_blank">
+            Ping Identity JWT Decoder
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="placeholder d-flex justify-content-between align-items-center">
+          <div class="flex-grow-1">
+            <div class="text-placeholder bottom size-md width-xl"></div>
+            <div class="text-placeholder bottom size-md width-xl"></div>
+            <div class="text-placeholder size-md width-md" style="margin-bottom: 35px;"></div>
+          </div>
+          <div class="button-placeholder"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

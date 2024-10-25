@@ -1,0 +1,173 @@
+/* style overrides */
+a {
+  text-decoration: none;
+  color: #277BA5;
+  font-size: 15px;
+  line-height: 18.29px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #253746;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22.5px;
+  text-align: left;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  /* max-width: 1540px; */
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.header-container {
+  height: 80px;
+  border-bottom: 1px solid #CACED3;
+}
+
+.body-container {
+  background-color: #ffffff;
+  padding: 30px;
+}
+
+.card {
+  box-shadow: rgba(37, 55, 70, 0.15) 0px 1px 14px;
+  padding: 30px;
+  margin: 0 0 30px 0;
+}
+
+.card span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card .link {
+  text-decoration: underline;
+}
+
+.token-container {
+  padding: 10px;
+  background-color: rgb(247, 248, 253);
+  border: 1px solid rgb(229, 233, 248);
+  max-height: 90px;
+}
+
+.token-container .token {
+  word-wrap: break-word;
+  font-family: "Roboto Mono", serif;
+  font-size: 13px;
+  line-height: 19px;
+  font-weight: 300;
+}
+
+.token-container .token-copy-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.placeholder {
+  gap: 50px;
+}
+
+.text-placeholder {
+  border-radius: 18px;
+  background: #E4E6E9;
+}
+
+.button-placeholder {
+  border-radius: 18px;
+  background-color: #F2F3F4;
+  width: 202px;
+  height: 46px;
+}
+
+.image-placeholder {
+  background: #F2F3F4;
+  width: 195px;
+  height: 177px;
+  border-radius: 18px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-family: Montserrat;
+  text-align: center;
+  border: 1px solid #979797;
+  color: #595959;
+  background-color: white;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  border-radius: 2px;
+}
+
+.button:hover {
+  color: #2996cc;
+  border-color: #2996cc;
+}
+
+.button.primary {
+  color: #FFFFFF;
+  background: #277BA5;
+  border: 1px solid #277BA5;
+}
+
+.button.primary:hover {
+  color: #fff;
+  background: #3d88ae;
+  border-color: #3d88ae;
+}
+
+.media {
+  padding: 52px 82px;
+}
+
+.media-body {
+  gap: 60px;
+}
+
+.media-title {
+  margin-bottom: 25px;
+}
