@@ -1,0 +1,5 @@
+../.idea
+../.github
+../express-authorization-code/node_modules
+../express-authorization-code/.env
+../express-authorization-code/.idea
