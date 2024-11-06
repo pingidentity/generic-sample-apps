@@ -42,6 +42,10 @@ body {
   justify-items: center;
 }
 
+.d-block {
+  display: block;
+}
+
 .d-flex {
   display: flex;
 }
@@ -76,6 +80,7 @@ body {
   box-shadow: rgba(37, 55, 70, 0.15) 0px 1px 14px;
   padding: 30px;
   margin: 0 0 30px 0;
+  border-radius: 3px;
 }
 
 .card span {
@@ -92,6 +97,7 @@ body {
   background-color: rgb(247, 248, 253);
   border: 1px solid rgb(229, 233, 248);
   max-height: 90px;
+  max-width: 883px;
 }
 
 .token-container .token {
@@ -161,13 +167,15 @@ body {
 }
 
 .media {
-  padding: 52px 82px;
-}
-
-.media-body {
+  padding: 52px;
   gap: 60px;
 }
 
+.media-body {
+  max-width: 400px;
+}
+
 .media-title {
+  margin-top: 0px;
   margin-bottom: 25px;
 }
