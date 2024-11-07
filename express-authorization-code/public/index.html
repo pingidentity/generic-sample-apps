@@ -1,39 +1,55 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <link rel="stylesheet" href="../css/styles.css">
-    </head>
-    <body class="page-body">
-      <div class="page-content">
-        <div class="header-container">
-          <a class="navbar-brand pt-0 ms-3">
-            <img width="150" src="../assets/logo.svg" alt="Logo"/>
-          </a>
-          <div class="button-container">
-            <a href="login"><button id="bxi-log-in" class="sign-on-button">Sign On</button></a>
-          </div>
-        </div>
-        <div class="body-container">
-          <div class="container-top">
-            <div class="video-placeholder">
-              
-            </div>
-            <div class="text-container-right-align">
-              <div class="text-placeholder top size-lg width-lg"></div>
-              <div class="text-placeholder top size-lg width-lg"></div>
-              <div class="text-placeholder size-lg width-sm"></div>
-            </div>
-          </div>
-          <div class="container-bottom">
-            <div class="text-container-left-align">
-              <div class="text-placeholder bottom size-md width-xl"></div>
-              <div class="text-placeholder bottom size-md width-xl"></div>
-              <div class="text-placeholder size-md width-md"></div>
-            </div>
-            <div class="bottom-right-placeholder"></div>
-          </div>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="header-container">
+    <a class="d-block" href="/">
+      <img width="132" src="./assets/ping-logo-horizontal.svg" alt="Logo" />
+    </a>
+    <div>
+      <a href="login" class="button primary">Sign On</a>
+    </div>
+  </div>
+
+  <div class="body-container">
+    <div class="card">
+      <div class="media d-flex">
+        <div class="image-placeholder"></div>
+        <div class="media-body flex-grow-1">
+          <div class="text-placeholder size-md width-sm"></div>
+          <div class="text-placeholder size-md width-lg"></div>
+          <div class="text-placeholder size-md width-lg"></div>
+          <div class="text-placeholder size-md width-md"></div>
         </div>
       </div>
-    </body>
+    </div>
 
-  </html>
+    <div class="card">
+      <div class="placeholder d-flex justify-content-between align-items-center">
+        <div class="flex-grow-1">
+          <div class="text-placeholder size-md width-xl"></div>
+          <div class="text-placeholder size-md width-xl"></div>
+          <div class="text-placeholder size-md width-md" style="margin-bottom: 35px;"></div>
+        </div>
+        <div class="button-placeholder"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
