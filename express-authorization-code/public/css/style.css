@@ -62,13 +62,14 @@ body {
   flex-grow: 1;
 }
 
-.bg-white {
-  background-color: #ffffff;
-}
-
 .header-container {
+  display: flex;
+  padding: 0 25px 0 25px;
+  align-items: center;
+  justify-content: space-between;
   height: 80px;
   border-bottom: 1px solid #CACED3;
+  background-color: #ffffff;
 }
 
 .body-container {
@@ -116,11 +117,6 @@ body {
 
 .placeholder {
   gap: 50px;
-}
-
-.text-placeholder {
-  border-radius: 18px;
-  background: #E4E6E9;
 }
 
 .button-placeholder {
@@ -178,4 +174,38 @@ body {
 .media-title {
   margin-top: 0px;
   margin-bottom: 25px;
+}
+
+.text-placeholder {
+  background: #E4E6E9;
+  border-radius: 18px;
+  margin-bottom: 14px;
+}
+
+.text-placeholder:last-child {
+  margin-bottom: 0;
+}
+
+.size-lg {
+  height: 14px;
+}
+
+.size-md {
+  height: 10px;
+}
+
+.width-lg {
+  min-width: 447px;
+}
+
+.width-xl {
+  min-width: 475px;
+}
+
+.width-sm {
+  width: 279px;
+}
+
+.width-md {
+  width: 296px;
 }

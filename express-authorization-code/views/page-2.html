@@ -7,7 +7,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="../public/css/styles.css">
   <link rel="stylesheet" href="../public/css/style.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -15,56 +14,41 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
     rel="stylesheet">
-
-  <script>
-    function copyToClipboard(elementId) {
-      const copyText = document.getElementById(elementId);
-
-      copyText.select();
-      navigator.clipboard.writeText(copyText.innerHTML);
-    }
-  </script>
 </head>
 
-<body class="page-body">
-  <div class="page-content">
-    <div class="header-container bg-white">
-      <div class="logo-button">
-        <a class="navbar-brand d-block pt-0 ms-3 ms-lg-0" id="bxi-logo" href="/">
-          <img width="132" src="../public/assets/ping-logo-horizontal.svg" alt="Logo" />
-        </a>
-      </div>
-      <div>
-        <button class="button" style="margin-right: 10px;">Account Recovery</button>
-        <button class="button primary">Sign On</button>
+<body>
+  <div class="header-container">
+    <a class="d-block" href="/">
+      <img width="132" src="../public/assets/ping-logo-horizontal.svg" alt="Logo" />
+    </a>
+    <div>
+      <button class="button" style="margin-right: 10px;">Account Recovery</button>
+      <button class="button primary">Sign On</button>
+    </div>
+  </div>
+
+  <div class="body-container">
+    <div class="card">
+      <div class="media d-flex">
+        <div class="image-placeholder"></div>
+        <div class="media-body flex-grow-1">
+          <div class="text-placeholder size-md width-sm"></div>
+          <div class="text-placeholder size-md width-lg"></div>
+          <div class="text-placeholder size-md width-lg"></div>
+          <div class="text-placeholder size-md width-md"></div>
+        </div>
       </div>
     </div>
 
-    <div class="body-container">
-      <div class="card">
-        <div class="media d-flex">
-          <div class="image-placeholder"></div>
-
-          <div class="media-body flex-grow-1">
-            <h3 class="media-title">This is an interactive preview</h3>
-            <p>Complete the steps under “Design a Solution”, then use this sample application to demo a registration
-              and
-              sign-on experience.</p>
-          </div>
+    <div class="card">
+      <div class="placeholder d-flex justify-content-between align-items-center">
+        <div class="flex-grow-1">
+          <div class="text-placeholder size-md width-xl"></div>
+          <div class="text-placeholder size-md width-xl"></div>
+          <div class="text-placeholder size-md width-md" style="margin-bottom: 35px;"></div>
         </div>
+        <div class="button-placeholder"></div>
       </div>
-
-      <div class="card">
-        <div class="placeholder d-flex justify-content-between align-items-center">
-          <div class="flex-grow-1">
-            <div class="text-placeholder bottom size-md width-xl"></div>
-            <div class="text-placeholder bottom size-md width-xl"></div>
-            <div class="text-placeholder size-md width-md" style="margin-bottom: 35px;"></div>
-          </div>
-          <div class="button-placeholder"></div>
-        </div>
-      </div>
-
     </div>
   </div>
 </body>
