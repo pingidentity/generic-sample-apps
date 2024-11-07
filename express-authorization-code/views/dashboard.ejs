@@ -1,67 +1,90 @@
 <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <link rel="stylesheet" href="../css/styles.css">
-      <script>
-        function copyToClipboard(elementId) {
-            const copyText = document.getElementById(elementId);
+<html lang="en">
 
-            copyText.select();
-            navigator.clipboard.writeText(copyText.innerHTML);
-          }
-      </script>
-    </head>    
-    <body class="page-body">
-      <div class="page-content">
-        <div class="header-container">
-          <div class="logo-button">
-            <a class="navbar-brand pt-0 ms-3 ms-lg-0" id="bxi-logo" href="/">
-              <img width="150" src="../assets/logo.svg" alt="Logo"/>
-            </a>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    const copyToClipboard = async (elementId) => {
+      const copyText = document.getElementById(elementId).innerHTML;
+      try {
+        await navigator.clipboard.writeText(copyText);
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class="header-container">
+    <a class="d-block" href="/">
+      <img width="132" src="../assets/ping-logo-horizontal.svg" alt="Logo" />
+    </a>
+    <a href="logout">Sign Off</a>
+  </div>
+
+  <div class="body-container">
+    <div class="card">
+      <div>
+        <span>Access Token</span>
+        <div class="token-container d-flex">
+          <div style="width:100%; overflow-y: auto;">
+            <span class="token" id="accessToken">
+              <%= accessToken %>
+            </span>
           </div>
-          <div>
-            <a href="logout"><button id="bxi-log-out" class="log-out-button">Sign Off</button></a>
-          </div>
-        </div>
-        <div class="body-container">
-          <div class="dashboard-container-top">
-            <div class="profile-container">
-              <h3 class="profile-header-three">My Profile</h3>
-              <div class="screenshot-placeholder"></div>
-            </div>
-            <div class="blank-placeholder-top-right">
-              <div class="token-item">
-                <div class="token-item-title">Access Token</div>
-                <div class="token-input-container">
-                  <textarea class="token-input" type="text" id="accessToken"><%= accessToken %></textarea>
-                  <div class="token-to-clipboard">
-                    <img src="../assets/clipboard.svg" alt="Copy to Clipboard" onclick="copyToClipboard('accessToken')"/>
-                  </div>
-                </div>
-              </div>
-              <div class="token-item">
-                <div class="token-item-title">Id Token</div>
-                <div class="token-input-container">
-                  <textarea class="token-input" type="text" id="idToken"><%= idToken %></textarea>
-                  <div class="token-to-clipboard">
-                    <img src="../assets/clipboard.svg" alt="Copy to Clipboard" onclick="copyToClipboard('idToken')"/>
-                  </div>
-                </div>
-              </div>
-              <div class="decoder-link">
-                <a href="https://developer.pingidentity.com/en/tools/jwt-decoder.html" target="_blank">Ping Identity JWT Decoder</a>
-              </div>
-            </div>
-          </div>
-          <div class="container-bottom">
-            <div class="text-container-left-align">
-              <div class="text-placeholder bottom size-md width-xl"></div>
-              <div class="text-placeholder bottom size-md width-xl"></div>
-              <div class="text-placeholder size-md width-md"></div>
-            </div>
-            <div class="bottom-right-placeholder"></div>
-          </div>
+          <button class="token-copy-button" onclick="copyToClipboard('accessToken')">
+            <img src="../assets/clipboard.svg" alt="Copy to Clipboard" />
+          </button>
         </div>
       </div>
-    </body>
-  </html>
+
+      <div style="padding-top:15px">
+        <span>Id Token</span>
+        <div class="token-container d-flex">
+          <div style="width:100%; overflow-y: auto;">
+            <span class="token" id="idToken">
+              <%= idToken %>
+            </span>
+          </div>
+          <button class="token-copy-button" onclick="copyToClipboard('idToken')">
+            <img src="../assets/clipboard.svg" alt="Copy to Clipboard" />
+          </button>
+        </div>
+      </div>
+
+      <div style="padding-top:22px">
+        <a class="link" href="https://developer.pingidentity.com/en/tools/jwt-decoder.html" target="_blank">
+          Ping Identity JWT Decoder
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="placeholder d-flex justify-content-between align-items-center">
+        <div class="flex-grow-1">
+          <div class="text-placeholder bottom size-md width-xl"></div>
+          <div class="text-placeholder bottom size-md width-xl"></div>
+          <div class="text-placeholder size-md width-md" style="margin-bottom: 35px;"></div>
+        </div>
+        <div class="button-placeholder"></div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
