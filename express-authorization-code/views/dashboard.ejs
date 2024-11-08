@@ -17,9 +17,10 @@
 
   <script>
     const copyToClipboard = async (elementId) => {
-      const copyText = document.getElementById(elementId).innerHTML;
+      const copyText = document.getElementById(elementId).innerText;
       try {
         await navigator.clipboard.writeText(copyText);
+        alert("Text Copied!")
       } catch (err) {
         console.error('Failed to copy: ', err);
       }
