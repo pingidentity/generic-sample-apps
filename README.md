@@ -1,4 +1,4 @@
-<img src="./img/PingLogo-Off Center Right.png" alt="Ping Logo" width="500"/>
+<img src="./img/Ping-Logo.svg" alt="Ping Logo" width="500"/>
 
 ## Samples
 
